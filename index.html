@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAAD Futures 2027 — Design Agency</title>
+  <meta name="description" content="CAAD Futures 2027: Design Agency. June 29 – July 3, 2027. Calgary, Canada. An international conference on computational design, AI, and design agency.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body data-phase="A">
+
+  <!-- ══ NAV ══ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CAAD Futures 2027 <span>Calgary</span></a>
+      <ul class="nav-links">
+        <li><a href="papers.html">Papers</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="/program">Program</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ MOBILE MENU ══ -->
+  <div class="mobile-menu">
+    <a href="papers.html">Papers</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="/program">Program</a>
+    <a href="venue.html">Venue</a>
+    <a href="registration.html">Registration</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <p class="hero-eyebrow">CAAD Futures 2027</p>
+    <h1 class="hero-title">Design Agency</h1>
+    <!-- <p class="hero-subtitle">AI, Computation, and the Reconfiguration of Design</p> -->
+    <p class="hero-subtitle"></p>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+        </svg>
+        June 29 – July 3, 2027
+      </div>
+      <div class="hero-meta-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+        </svg>
+        Calgary, Canada
+      </div>
+      <div class="hero-meta-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21"/>
+        </svg>
+        SAPL, University of Calgary
+      </div>
+    </div>
+
+    <!-- Phase Dashboard Card -->
+    <div class="phase-card">
+      <p class="phase-label">Now</p>
+      <h3 class="phase-title">Call for Papers Open</h3>
+      <p class="phase-desc">Full paper submission deadline: September 30, 2026</p>
+      <a href="papers.html" class="phase-btn">
+        <span>Submit Paper</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Gantt Timeline -->
+    <div class="gantt" id="gantt"></div>
+
+  </section>
+
+
+  <!-- ══ THEME ══ -->
+  <section class="theme-section" id="theme">
+    <div class="section reveal">
+      <p class="section-label">Theme</p>
+      <h2 class="section-title">Design Agency</h2>
+      <div class="theme-grid">
+        <div class="theme-text">
+          <p>The rapid development of artificial intelligence has brought renewed attention to the question of design agency. As AI systems become actively embedded in computational design workflows, they prompt a re-examination of who — or what — acts, decides, and bears responsibility within design processes.</p>
+          <br>
+          <p>Rather than framing AI as a singular innovation, CAAD Futures 2027 approaches it as a catalyst that brings renewed attention to how agency is configured, negotiated, and distributed across designers, computational systems, and design cultures.</p>
+          <br>
+          <p>Situated in Calgary, the conference engages questions of design agency within a regional context shaped by urban transformation, environmental conditions, and evolving technological infrastructures.</p>
+        </div>
+        <div class="theme-topics">
+          <div class="topic-item">
+            <span class="topic-number">01</span>
+            <span class="topic-text">Design Generation</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-number">02</span>
+            <span class="topic-text">Theory, History, and Pedagogy</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-number">03</span>
+            <span class="topic-text">Architectural and Urban Systems</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-number">04</span>
+            <span class="topic-text">Socio-Technical Implications of Computational Design</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-number">05</span>
+            <span class="topic-text">Fabrication, Materiality, and Robotic Construction</span>
+          </div>
+          <div class="topic-item">
+            <span class="topic-number">06</span>
+            <span class="topic-text">Data, Sensing, and Computational Infrastructure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ IMPORTANT DATES ══ -->
+  <section class="section reveal" id="dates">
+    <!-- <p class="section-label">Important Dates</p> -->
+    <h2 class="section-title">Important Dates</h2>
+    <p class="section-desc">Key deadlines and milestones for CAAD Futures 2027. All dates are subject to refinement in consultation with the CAAD Futures Board.</p>
+
+    <table class="dates-table">
+      <tbody>
+        <tr class="dates-row is-now">
+          <td class="dates-date">September 30, 2026</td>
+          <td class="dates-event">Full Paper Submission</td>
+          <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">October – December 2026</td>
+          <td class="dates-event">Review Period</td>
+          <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Early December 2026</td>
+          <td class="dates-event">Reviews Released</td>
+          <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Late December 2026</td>
+          <td class="dates-event">Final Acceptance</td>
+          <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Mid February 2027</td>
+          <td class="dates-event">Camera-Ready Submission</td>
+          <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">February 2027</td>
+          <td class="dates-event">Workshop Proposal Deadline</td>
+          <td class="dates-tag"><span class="tag-workshops">Workshops</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Mid May 2027</td>
+          <td class="dates-event">Workshop Acceptance</td>
+          <td class="dates-tag"><span class="tag-workshops">Workshops</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Late March 2027</td>
+          <td class="dates-event">Early-Bird Registration</td>
+          <td class="dates-tag"><span class="tag-reg">Registration</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">Early June 2027</td>
+          <td class="dates-event">Regular Registration</td>
+          <td class="dates-tag"><span class="tag-reg">Registration</span></td>
+        </tr>
+        <tr class="dates-row dates-conf">
+          <td class="dates-date">June 29 – July 3, 2027</td>
+          <td class="dates-event">Conference</td>
+          <td class="dates-tag"><span class="tag-conf">Calgary</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ══ VENUE PREVIEW ══ -->
+  <section class="section reveal" id="venue-preview">
+    <p class="section-label">Venue</p>
+    <h2 class="section-title">SAPL Downtown Campus</h2>
+    <p class="section-desc">The School of Architecture, Planning and Landscape at the University of Calgary. A purpose-adapted urban campus in the core of downtown Calgary — 801 7th Ave SW.</p>
+
+    <div class="venue-preview">
+      <div style="width:100%; height:100%; background: linear-gradient(135deg, #c9b99a 0%, #8b7355 50%, #4a5568 100%); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-family:var(--font-display); font-size:1.2rem; letter-spacing:0.1em;">
+        VENUE PHOTO
+      </div>
+      <div class="venue-overlay">
+        <p class="venue-overlay-title">801 7th Ave SW</p>
+        <p class="venue-overlay-sub">Calgary, AB, Canada T2P 3P7</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ══ PROGRAM ══ -->
+  <section class="section reveal" id="program-preview">
+    <!-- <p class="section-label">Program</p> -->
+    <h2 class="section-title">Program</h2>
+    <p class="section-desc">Two days of intensive workshops followed by three days of paper presentations, keynotes, and panels. Detailed sessions will be announced.</p>
+
+    <div class="program-grid">
+
+      <!-- Day 1 -->
+      <div class="program-day program-day--ws">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 1</div>
+          <div class="program-day-date">Jun 29 <span>Sunday</span></div>
+          <div class="program-day-type tag-ws">Workshop</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">AM</span>
+            <span class="program-item">Opening Remark &middot; Workshop Sessions 1</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Explore Calgary Downtown</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item">Workshop Sessions 2 &middot; Coffee Break</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="program-day program-day--ws">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 2</div>
+          <div class="program-day-date">Jun 30 <span>Monday</span></div>
+          <div class="program-day-type tag-ws">Workshop</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">AM</span>
+            <span class="program-item">Workshop Sessions 3</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Catered Lunch &middot; Workshop Social</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item">Workshop Sessions 4 &middot; Workshop Exchange</span>
+          </div>
+          <div class="program-slot program-slot--eve">
+            <span class="program-time">Eve</span>
+            <span class="program-item program-item--social">Welcome Cocktail Reception</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="program-day program-day--papers">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 3</div>
+          <div class="program-day-date">Jul 1 <span>Tuesday</span></div>
+          <div class="program-day-type tag-papers">Papers</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">AM</span>
+            <span class="program-item">Deans' Welcome &middot; <strong>Keynote 1</strong> &middot; Paper Sessions 1</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Explore Calgary Downtown</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item">Paper Sessions 2 &middot; Coffee Break</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="program-day program-day--papers">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 4</div>
+          <div class="program-day-date">Jul 2 <span>Wednesday</span></div>
+          <div class="program-day-type tag-papers">Papers</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">AM</span>
+            <span class="program-item">Paper Sessions 3</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Catered Lunch</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item">Paper Sessions 4 &middot; <strong>Keynote 2</strong> &middot; Workshop Outcomes</span>
+          </div>
+          <div class="program-slot program-slot--eve">
+            <span class="program-time">Eve</span>
+            <span class="program-item program-item--social">Conference Banquet</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="program-day program-day--papers">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 5</div>
+          <div class="program-day-date">Jul 3 <span>Thursday</span></div>
+          <div class="program-day-type tag-papers">Papers</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">AM</span>
+            <span class="program-item"><strong>Keynote 3</strong> &middot; Paper Sessions 5</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Catered Lunch</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item"><strong>Keynote 4</strong> &middot; Paper Sessions 6 &middot; Closing Remarks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="program-day program-day--optional">
+        <div class="program-day-header">
+          <div class="program-day-num">Day 6</div>
+          <div class="program-day-date">Jul 4 <span>Friday</span></div>
+          <div class="program-day-type tag-optional">Optional</div>
+        </div>
+        <div class="program-day-body">
+          <div class="program-slot">
+            <span class="program-time">8 AM</span>
+            <span class="program-item">Departure &middot; Visit Lake Louise</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">Lunch</span>
+            <span class="program-item program-item--light">Art Centre Buffet</span>
+          </div>
+          <div class="program-slot">
+            <span class="program-time">PM</span>
+            <span class="program-item">Banff Gondola</span>
+          </div>
+          <div class="program-slot program-slot--eve">
+            <span class="program-time">Eve</span>
+            <span class="program-item program-item--social">Dinner in Banff &middot; Return to Calgary</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="divider"><hr></div>
+
+
+  <!-- ══ COMMITTEE ══ -->
+  <section class="section reveal" id="committee">
+    <!-- <p class="section-label">Organizing Team</p> -->
+    <h2 class="section-title">Organizing Team</h2>
+    <p class="section-desc">CAAD Futures 2027 is organized by a multidisciplinary team based within the School of Architecture, Planning and Landscape at the University of Calgary.</p>
+
+    <div class="committee-grid">
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/jinmo_rhee.png" alt="Jinmo Rhee">
+        <p class="committee-name">Jinmo Rhee</p>
+        <p class="committee-role">Organizing Chair</p>
+        <p class="committee-dept">Design and Data Science</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/sneha_jain.png" alt="Sneha Jain">
+        <p class="committee-name">Sneha Jain</p>
+        <p class="committee-role">Scientific Chair</p>
+        <p class="committee-dept">Building Science</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/isabel_ochoa.png" alt="Isabel Ochoa Quintero">
+        <p class="committee-name">Isabel Ochoa Quintero</p>
+        <p class="committee-role">Workshop Chair</p>
+        <p class="committee-dept">Architecture</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/alicia_nahmad.png" alt="Alicia Nahmad Vazquez">
+        <p class="committee-name">Alicia Nahmad Vazquez</p>
+        <p class="committee-role">Industry / Practice Chair</p>
+        <p class="committee-dept">Architecture</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/dan_hapton.png" alt="Dan Hapton">
+        <p class="committee-name">Dan Hapton</p>
+        <p class="committee-role">Outreach Chair</p>
+        <p class="committee-dept">Architecture</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/guy_gardner.png" alt="Guy Gardner">
+        <p class="committee-name">Guy Gardner</p>
+        <p class="committee-role">Facilities Chair</p>
+        <p class="committee-dept">Digital Fabrication</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/matthew_parker.png" alt="Matthew Parker">
+        <p class="committee-name">Matthew Parker</p>
+        <p class="committee-role">Local Event Chair</p>
+        <p class="committee-dept">Architecture</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/jason_johnson.png" alt="Jason S. Johnson">
+        <p class="committee-name">Jason S. Johnson</p>
+        <p class="committee-role">Administrative Support</p>
+        <p class="committee-dept">Assoc. Dean, Architecture</p>
+      </div>
+
+      <div class="committee-card">
+        <img class="committee-photo" src="imgs/josh_taron.png" alt="Joshua Taron">
+        <p class="committee-name">Joshua Taron</p>
+        <p class="committee-role">Institutional Support</p>
+        <p class="committee-dept">Assoc. Dean, Research</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">CAAD Futures 2027</p>
+          <p class="footer-brand-sub">
+            Design Agency<br>
+            June 29 – July 3, 2027<br>
+            Calgary, Canada
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Conference</p>
+          <ul class="footer-links">
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="/program">Program</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Attend</p>
+          <ul class="footer-links">
+            <li><a href="venue.html">Venue & Travel</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="contact.html">Organizing Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:caadfutures2027@ucalgary.ca">caadfutures2027@ucalgary.ca</a></li>
+            <li><a href="https://sapl.ucalgary.ca" target="_blank" rel="noopener">SAPL Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 CAAD Futures. School of Architecture, Planning and Landscape, University of Calgary.</p>
+        <div class="footer-logos">
+          <span>SAPL</span>
+          <span>University of Calgary</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
