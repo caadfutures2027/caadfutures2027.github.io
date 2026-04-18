@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venue & Travel — CAAD Futures 2027</title>
+  <meta name="description" content="CAAD Futures 2027 venue information. SAPL Downtown Campus, University of Calgary. Accommodation, travel, and local context.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CAAD Futures 2027 <span>Calgary</span></a>
+      <ul class="nav-links">
+        <li><a href="papers.html">Papers</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="/program">Program</a></li>
+        <li><a href="venue.html" class="active">Venue</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="papers.html">Papers</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="/program">Program</a>
+    <a href="venue.html">Venue</a>
+    <a href="registration.html">Registration</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <!-- ══ FULL-PAGE BACKGROUND ══ -->
+  <div class="venue-bg" style="background-image: url('imgs/venue_bg.png');">
+
+  <!-- ══ PAGE HEADER ══ -->
+  <section class="page-header venue-page-header">
+      <p class="section-label">CAAD Futures 2027</p>
+      <h1 class="page-title">Venue & Travel</h1>
+      <p class="venue-hero-institution">School of Architecture, Planning, and Landscape (SAPL), University of Calgary</p>
+      <p class="venue-hero-address">801 7th Ave SW, Calgary, AB</p>
+  </section>
+
+
+  <!-- ══ SECTION 1: HOST INSTITUTION ══ -->
+  <section class="section venue-section" id="venue-host" style="padding-top: 3rem;">
+
+    <!-- Downtown Campus -->
+    <div class="cfp-theme-block reveal">
+      <h3 class="cfp-section-heading">SAPL Downtown Campus</h3>
+      <div class="cfp-theme-text">
+        <p>CAAD Futures 2027 will be hosted at SAPL's newly established downtown campus. Recently relocated from the main university campus, SAPL's move to downtown Calgary reflects a strategic commitment to embedding architectural education and research directly within the urban, social, and professional contexts in which design knowledge is produced.</p>
+        <p>The facilities are housed in a purpose-adapted building known as <strong>801</strong>, situated in the core of downtown Calgary. The building offers contemporary infrastructure — lecture halls, seminar rooms, fabrication labs, and flexible studio spaces — providing a fitting setting for a conference on computation, intelligence, and design practice.</p>
+      </div>
+
+      <!-- Conference Spaces Collage -->
+      <div class="venue-collage" style="margin-top: 2rem;">
+        <!-- Row 1: Building (tall, 2 rows) + Atrium (square) -->
+        <div class="vc-building">
+          <img src="imgs/sapl_downtown.png" alt="SAPL Downtown Campus">
+          <span class="venue-collage-label">SAPL Downtown</span>
+        </div>
+        <div class="vc-atrium">
+          <img src="imgs/venue_atrium.png" alt="Calgary Atrium">
+          <span class="venue-collage-label">Atrium</span>
+        </div>
+        <!-- Row 2 right: Large Room (fills under atrium) -->
+        <div class="vc-large">
+          <img src="imgs/venue_large.png" alt="Large Presentation Room">
+          <span class="venue-collage-label">Large Rooms</span>
+        </div>
+        <!-- Row 3: Medium + Seminar + Studio -->
+        <div class="vc-medium">
+          <img src="imgs/venue_medium.png" alt="Medium Session Room">
+          <span class="venue-collage-label">Medium Rooms</span>
+        </div>
+        <div class="vc-seminar">
+          <img src="imgs/venue_seminar.png" alt="Seminar Room">
+          <span class="venue-collage-label">Seminar Rooms</span>
+        </div>
+        <div class="vc-studio">
+          <img src="imgs/venue_studio.png" alt="Studio and Exhibition Space">
+          <span class="venue-collage-label">Studio & Exhibition</span>
+        </div>
+        <!-- Row 4: Fabrication wide -->
+        <div class="vc-fab">
+          <img src="imgs/venue_fabrication.png" alt="Robotic Fabrication Lab">
+          <span class="venue-collage-label">Fabrication Labs</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ MAP + SCROLLYTELLING SECTION ══ -->
+  <section class="venue-map-story" id="venue-map-story">
+    <div class="vms-map" id="venue-map"></div>
+    <div class="vms-text">
+
+      <div class="vms-panel" data-map-section="getting-here">
+        <h3 class="cfp-section-heading">Getting Here</h3>
+        <div class="cfp-theme-text">
+          <p><strong>Calgary International Airport (YYC)</strong> is approximately 20 minutes from downtown by taxi or ride-share. Calgary Transit connects the airport to downtown, with transfers to the CTrain light rail.</p>
+          <p>The SAPL campus is directly accessible via <strong>CTrain</strong> stations within a short walk.</p>
+        </div>
+      </div>
+
+      <div class="vms-panel" data-map-section="accommodation">
+        <h3 class="cfp-section-heading">Accommodation</h3>
+        <div class="cfp-theme-text" style="margin-bottom: 1rem;">
+          <p>The campus is situated within a dense hotel district.</p>
+        </div>
+        <table class="venue-hotels-table">
+          <thead>
+            <tr>
+              <th class="venue-hotel-dist">Distance</th>
+              <th class="venue-hotel-name-h">Hotels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="venue-hotel-dist-val"><strong>3 min walk</strong></td>
+              <td class="venue-hotel-names">Sandman Signature · Ramada Plaza</td>
+            </tr>
+            <tr>
+              <td class="venue-hotel-dist-val"><strong>10 min walk</strong></td>
+              <td class="venue-hotel-names">Hampton Inn (Hilton) · Courtyard (Marriott)</td>
+            </tr>
+            <tr>
+              <td class="venue-hotel-dist-val"><strong>20 min / transit</strong></td>
+              <td class="venue-hotel-names">Westin · Hyatt Regency · Marriott · Delta · Residence Inn · Fairmont Palliser · Hilton Garden</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="vms-panel" data-map-section="calgary">
+        <h3 class="cfp-section-heading">Calgary</h3>
+        <div class="cfp-theme-text" style="margin-bottom: 1rem;">
+          <p>Downtown Calgary offers a compact and culturally rich urban environment within walking distance of the conference venue.</p>
+        </div>
+        <table class="venue-spaces-table">
+          <tbody>
+            <tr><td class="venue-space-name">Calgary Central Library</td><td class="venue-space-desc">A major civic and architectural landmark by Snøhetta.</td></tr>
+            <tr><td class="venue-space-name">Studio Bell</td><td class="venue-space-desc">Home to the National Music Centre.</td></tr>
+            <tr><td class="venue-space-name">Peace Bridge</td><td class="venue-space-desc">Designed by Santiago Calatrava. Connected to the Bow River pathway.</td></tr>
+            <tr><td class="venue-space-name">Stephen Avenue Walk</td><td class="venue-space-desc">Primary pedestrian corridor — cafés, restaurants, informal gatherings.</td></tr>
+            <tr><td class="venue-space-name">Kensington</td><td class="venue-space-desc">Independent shops, cafés, and local cultural venues.</td></tr>
+            <tr><td class="venue-space-name">Calgary Tower</td><td class="venue-space-desc">A prominent urban landmark anchoring the downtown skyline.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PHOTO GALLERY ══ -->
+  <section class="section venue-section" style="padding-top: 2rem; padding-bottom: 0;">
+    <div class="venue-gallery-card reveal">
+      <div class="vgc-calgary">
+        <img src="imgs/calgary_summer.png" alt="Calgary downtown and Bow River in summer">
+        <span class="venue-collage-label">Calgary & Bow River</span>
+      </div>
+      <div class="vgc-banff">
+        <img src="imgs/banff_downtown.png" alt="Downtown Banff with Cascade Mountain">
+        <span class="venue-collage-label">Banff Avenue</span>
+      </div>
+      <div class="vgc-lake">
+        <img src="imgs/moraine_lake.png" alt="Moraine Lake in the Canadian Rockies">
+        <span class="venue-collage-label">Moraine Lake</span>
+      </div>
+      <div class="vgc-gondola">
+        <img src="imgs/banff_gondola.png" alt="Banff Gondola with Rocky Mountain views">
+        <span class="venue-collage-label">Banff Gondola</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CANADIAN ROCKY MOUNTAINS ══ -->
+  <section class="section venue-section" id="venue-rockies" style="padding-top: 3rem;">
+    <h2 class="venue-rockies-title reveal">Canadian Rocky Mountains <span>(Banff)</span></h2>
+    <div class="cfp-theme-block reveal">
+      <div class="cfp-theme-text" style="margin-bottom: 1rem;">
+        <p>Banff National Park and the Canadian Rocky Mountains are within close proximity to Calgary, situating the conference within a broader regional and environmental context. An optional post-conference day trip is planned for Day 6 (July 4).</p>
+      </div>
+      <table class="venue-spaces-table">
+        <tbody>
+          <tr><td class="venue-space-name">Day Trip — July 4</td><td class="venue-space-desc">Optional same-day excursion. Departure 8:00 AM from Calgary.</td></tr>
+          <tr><td class="venue-space-name">Lake Louise</td><td class="venue-space-desc">One of the most iconic sites in the Canadian Rockies.</td></tr>
+          <tr><td class="venue-space-name">Banff Gondola</td><td class="venue-space-desc">Panoramic views of the Rocky Mountain landscape.</td></tr>
+          <tr><td class="venue-space-name">Dinner in Banff</td><td class="venue-space-desc">Free time and dinner before return to Calgary.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  </div><!-- /venue-bg -->
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">CAAD Futures 2027</p>
+          <p class="footer-brand-sub">
+            Design Agency<br>
+            June 29 – July 3, 2027<br>
+            Calgary, Canada
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Conference</p>
+          <ul class="footer-links">
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="/program">Program</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Attend</p>
+          <ul class="footer-links">
+            <li><a href="venue.html">Venue & Travel</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="contact.html">Organizing Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:caadfutures2027@ucalgary.ca">caadfutures2027@ucalgary.ca</a></li>
+            <li><a href="https://sapl.ucalgary.ca" target="_blank" rel="noopener">SAPL Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 CAAD Futures. School of Architecture, Planning and Landscape, University of Calgary.</p>
+        <div class="footer-logos">
+          <span>SAPL</span>
+          <span>University of Calgary</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/venue-map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
