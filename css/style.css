@@ -897,6 +897,99 @@ body {
   object-fit: cover;
 }
 
+.venue-collage-4col {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.venue-collage-4col > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  height: 220px;
+}
+
+.venue-collage-4col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.venue-collage-4col > div:hover img {
+  transform: scale(1.04);
+}
+
+.venue-collage-4col > div:nth-child(3) img {
+  object-position: center 40%;
+}
+
+.venue-collage-4col > div:nth-child(4) img {
+  object-position: center 20%;
+}
+
+/* ── SPONSORS ── */
+
+.sponsor-tier {
+  margin-top: 2rem;
+}
+
+.sponsor-tier-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-bottom: 0.8rem;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sponsor-logo-placeholder {
+  padding: 1rem 2rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  background: var(--color-surface);
+}
+
+.sponsor-logo {
+  height: 28px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.sponsor-logo-invert {
+  filter: invert(1) brightness(0.3);
+}
+
+.sponsor-logo:hover {
+  opacity: 1;
+}
+
+.sponsor-logo-lg {
+  height: 72px;
+}
+
+.land-acknowledgement {
+  margin-top: 1.2rem;
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
 .venue-overlay {
   position: absolute;
   bottom: 0;
@@ -1546,6 +1639,33 @@ body {
   color: var(--color-accent);
 }
 
+/* ── CONTACT PAGE ── */
+
+.contact-content {
+  max-width: 600px;
+}
+
+.contact-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact-email:hover {
+  border-bottom-color: var(--color-accent);
+}
+
 .vgc-calgary {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -1954,6 +2074,8 @@ body {
   .committee-grid { grid-template-columns: 1fr 1fr; }
 
   .venue-preview { height: 260px; }
+  .venue-collage-4col { grid-template-columns: repeat(2, 1fr); }
+  .venue-collage-4col > div { height: 160px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
