@@ -5,52 +5,80 @@
 
   /* ══ DATA ══ */
   var FLOORS = [
-    { floor:14,label:'14F',name:'Admin',rooms:[{id:'1401',num:'1401',cap:0}]},
-    { floor:13,label:'13F',name:'MPLAN / MLA',rooms:[{id:'1301',num:'1301',cap:120},{id:'1305',num:'1305',cap:110}]},
-    { floor:12,label:'12F',name:'ARCH FDN',rooms:[{id:'1201',num:'1201',cap:120},{id:'1205',num:'1205',cap:22},{id:'1206',num:'1206',cap:22}]},
-    { floor:11,label:'11F',name:'MARCH',rooms:[{id:'1101',num:'1101',cap:126},{id:'1104',num:'1104',cap:110}]},
+    { floor:14,label:'14F',name:'',rooms:[{id:'1401',num:'1401',cap:0}]},
+    { floor:13,label:'13F',name:'',rooms:[{id:'1301',num:'1301',cap:120},{id:'1305',num:'1305',cap:110}]},
+    { floor:12,label:'12F',name:'',rooms:[{id:'1201',num:'1201',cap:120},{id:'1205',num:'1205',cap:22},{id:'1206',num:'1206',cap:22}]},
+    { floor:11,label:'11F',name:'',rooms:[{id:'1101',num:'1101',cap:126},{id:'1104',num:'1104',cap:110}]},
     { floor:10,label:'10F',name:'GYM',rooms:[]},
-    { floor:9,label:'9F',name:'BDCI 4',rooms:[{id:'901',num:'901',cap:220},{id:'904',num:'904',cap:30},{id:'905',num:'905',cap:45}]},
-    { floor:8,label:'8F',name:'BDCI 3',rooms:[{id:'801',num:'801',cap:220},{id:'804',num:'804',cap:22},{id:'806',num:'806',cap:30}]},
-    { floor:7,label:'7F',name:'Research',rooms:[]},
-    { floor:6,label:'6F',name:'BDCI 2',rooms:[{id:'601',num:'601',cap:220},{id:'605',num:'605',cap:110}]},
-    { floor:5,label:'5F',name:'BDCI 1',rooms:[{id:'501',num:'501',cap:220},{id:'505',num:'505',cap:22},{id:'506',num:'506',cap:22}]},
-    { floor:2,label:'2F',name:'Workshops / +15',rooms:[]},
-    { floor:0,label:'G',name:'Ground',rooms:[{id:'Atrium',num:'Atrium',cap:200}]},
+    { floor:9,label:'9F',name:'',rooms:[{id:'901',num:'901',cap:220},{id:'904',num:'904',cap:30},{id:'905',num:'905',cap:45}]},
+    { floor:8,label:'8F',name:'',rooms:[{id:'801',num:'801',cap:220},{id:'804',num:'804',cap:22},{id:'806',num:'806',cap:30}]},
+    { floor:7,label:'7F',name:'',rooms:[{id:'CommonGround',num:'Common Ground',cap:80},{id:'702',num:'702',cap:12},{id:'703',num:'703',cap:10}]},
+    { floor:6,label:'6F',name:'',rooms:[{id:'601',num:'601',cap:220},{id:'605',num:'605',cap:110}]},
+    { floor:5,label:'5F',name:'',rooms:[{id:'501',num:'501',cap:220},{id:'505',num:'505',cap:22},{id:'506',num:'506',cap:22}]},
+    { floor:2,label:'2F',name:'',rooms:[{id:'WkA',num:'Shop Cluster 2F',cap:40},{id:'WkB',num:'Shop Cluster 3F',cap:40},{id:'+15',num:'+15',cap:100}]},
+    { floor:0,label:'1F',name:'',rooms:[{id:'Atrium',num:'Atrium',cap:200}]},
   ];
 
   var EV = [
-    {d:1,s:'09:00',e:'09:30',l:'Opening Remark',t:'ceremony',r:['605']},
-    {d:1,s:'09:30',e:'12:00',l:'Workshop Sessions 1',t:'workshop',r:['501','601','801','901']},
+    {d:1,s:'08:30',e:'09:00',l:'Morning Coffee',t:'break',r:['Atrium']},
+    {d:1,s:'09:00',e:'10:00',l:'Opening Remark',t:'ceremony',r:['Atrium']},
+    {d:1,s:'10:00',e:'12:00',l:'Workshop A',t:'workshop',r:['WkA'],pc:3,pi:0},
+    {d:1,s:'10:00',e:'12:00',l:'Workshop B',t:'workshop',r:['WkB'],pc:3,pi:1},
+    {d:1,s:'10:00',e:'12:00',l:'Workshop C',t:'workshop',r:['806'],pc:3,pi:2},
     {d:1,s:'12:00',e:'13:30',l:'Lunch — Explore Downtown',t:'break',r:[]},
-    {d:1,s:'13:30',e:'15:30',l:'Workshop Sessions 2',t:'workshop',r:['501','601','801','901']},
-    {d:1,s:'15:30',e:'16:00',l:'Coffee Break',t:'break',r:['Atrium']},
-    {d:2,s:'09:00',e:'12:00',l:'Workshop Sessions 3',t:'workshop',r:['501','601','801','901']},
-    {d:2,s:'12:00',e:'13:30',l:'Catered Lunch — Social',t:'break',r:[]},
-    {d:2,s:'13:30',e:'15:30',l:'Workshop Sessions 4',t:'workshop',r:['501','601','801','901']},
-    {d:2,s:'15:30',e:'17:00',l:'Workshop Exchange',t:'workshop',r:['605','905']},
-    {d:2,s:'18:00',e:'20:00',l:'Welcome Reception',t:'social',r:['Atrium']},
-    {d:3,s:'09:00',e:'09:30',l:"Deans' Welcome",t:'ceremony',r:['605']},
-    {d:3,s:'09:30',e:'10:30',l:'Keynote 1',t:'keynote',r:['605']},
-    {d:3,s:'10:30',e:'12:00',l:'Paper Sessions 1',t:'paper',r:['605','1104','1305','905']},
+    {d:1,s:'13:30',e:'15:30',l:'Workshop A',t:'workshop',r:['WkA'],pc:3,pi:0},
+    {d:1,s:'13:30',e:'15:30',l:'Workshop B',t:'workshop',r:['WkB'],pc:3,pi:1},
+    {d:1,s:'13:30',e:'15:30',l:'Workshop C',t:'workshop',r:['806'],pc:3,pi:2},
+    {d:1,s:'15:30',e:'16:00',l:'Coffee Break',t:'break',r:['CommonGround']},
+    {d:1,s:'16:00',e:'16:30',l:'Social Mixer',t:'social',r:['Atrium']},
+    {d:2,s:'08:30',e:'09:30',l:'Morning Coffee',t:'break',r:['Atrium']},
+    {d:2,s:'09:30',e:'12:00',l:'Workshop A',t:'workshop',r:['WkA'],pc:3,pi:0},
+    {d:2,s:'09:30',e:'12:00',l:'Workshop B',t:'workshop',r:['WkB'],pc:3,pi:1},
+    {d:2,s:'09:30',e:'12:00',l:'Workshop C',t:'workshop',r:['806'],pc:3,pi:2},
+    {d:2,s:'12:00',e:'13:30',l:'Catered Lunch — Social',t:'break',r:['+15','Atrium']},
+    {d:2,s:'13:30',e:'15:30',l:'Workshop A',t:'workshop',r:['WkA'],pc:3,pi:0},
+    {d:2,s:'13:30',e:'15:30',l:'Workshop B',t:'workshop',r:['WkB'],pc:3,pi:1},
+    {d:2,s:'13:30',e:'15:30',l:'Workshop C',t:'workshop',r:['806'],pc:3,pi:2},
+    {d:2,s:'15:30',e:'16:00',l:'Coffee Break',t:'break',r:['CommonGround']},
+    {d:2,s:'16:00',e:'17:30',l:'Workshop Exchange',t:'workshop',r:['605','905']},
+    {d:2,s:'18:00',e:'20:00',l:'Welcome Reception',t:'social',r:['+15','Atrium']},
+    {d:3,s:'08:30',e:'09:00',l:'Morning Coffee',t:'break',r:['Atrium']},
+    {d:3,s:'09:00',e:'09:30',l:"Deans' Welcome",t:'ceremony',r:['Atrium']},
+    {d:3,s:'09:30',e:'10:30',l:'Keynote 1',t:'keynote',r:['Atrium']},
+    {d:3,s:'10:30',e:'12:00',l:'Session 1',t:'paper',r:['605'],pc:3,pi:0},
+    {d:3,s:'10:30',e:'12:00',l:'Session 2',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:3,s:'10:30',e:'12:00',l:'Session 3',t:'paper',r:['1305'],pc:3,pi:2},
     {d:3,s:'12:00',e:'13:30',l:'Lunch — Explore Downtown',t:'break',r:[]},
-    {d:3,s:'13:30',e:'15:30',l:'Paper Sessions 2',t:'paper',r:['605','1104','1305','905']},
-    {d:3,s:'15:30',e:'16:00',l:'Coffee Break',t:'break',r:['Atrium']},
-    {d:4,s:'08:30',e:'09:00',l:'Morning Coffee',t:'break',r:['Atrium']},
-    {d:4,s:'09:00',e:'12:00',l:'Paper Sessions 3',t:'paper',r:['605','1104','1305','905']},
-    {d:4,s:'12:00',e:'13:30',l:'Catered Lunch',t:'break',r:[]},
-    {d:4,s:'13:30',e:'15:30',l:'Paper Sessions 4',t:'paper',r:['605','1104','1305','905']},
-    {d:4,s:'15:30',e:'16:00',l:'Coffee Break',t:'break',r:['Atrium']},
-    {d:4,s:'17:00',e:'18:00',l:'Keynote 2',t:'keynote',r:['605']},
-    {d:4,s:'18:00',e:'18:30',l:'Workshop Outcomes',t:'workshop',r:['605']},
-    {d:4,s:'19:00',e:'21:00',l:'Conference Banquet',t:'social',r:['Atrium']},
+    {d:3,s:'13:30',e:'15:30',l:'Session 4',t:'paper',r:['605'],pc:3,pi:0},
+    {d:3,s:'13:30',e:'15:30',l:'Session 5',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:3,s:'13:30',e:'15:30',l:'Session 6',t:'paper',r:['1305'],pc:3,pi:2},
+    {d:3,s:'15:30',e:'16:30',l:'Coffee Break',t:'break',r:['CommonGround']},
+    {d:3,s:'16:30',e:'17:00',l:'Awards',t:'ceremony',r:['CommonGround']},
+    {d:3,s:'17:00',e:'18:30',l:'Keynote 2',t:'keynote',r:['CommonGround']},
+    {d:4,s:'08:30',e:'09:30',l:'Morning Coffee',t:'break',r:['Atrium']},
+    {d:4,s:'09:30',e:'12:00',l:'Session 7',t:'paper',r:['605'],pc:3,pi:0},
+    {d:4,s:'09:30',e:'12:00',l:'Session 8',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:4,s:'09:30',e:'12:00',l:'Session 9',t:'paper',r:['1305'],pc:3,pi:2},
+    {d:4,s:'12:00',e:'13:30',l:'Catered Lunch',t:'break',r:['+15','Atrium']},
+    {d:4,s:'13:30',e:'15:30',l:'Session 10',t:'paper',r:['605'],pc:3,pi:0},
+    {d:4,s:'13:30',e:'15:30',l:'Session 11',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:4,s:'13:30',e:'15:30',l:'Session 12',t:'paper',r:['1305'],pc:3,pi:2},
+    {d:4,s:'15:30',e:'16:30',l:'Coffee Break',t:'break',r:['CommonGround']},
+    {d:4,s:'16:30',e:'17:30',l:'Workshop Outcomes',t:'workshop',r:['CommonGround']},
+    {d:4,s:'17:30',e:'19:00',l:'Keynote 3/4',t:'keynote',r:['CommonGround']},
+    {d:4,s:'19:00',e:'21:00',l:'Conference Banquet (TBD)',t:'social',r:[]},
     {d:5,s:'08:30',e:'09:00',l:'Morning Coffee',t:'break',r:['Atrium']},
-    {d:5,s:'09:00',e:'10:00',l:'Keynote 3',t:'keynote',r:['605']},
-    {d:5,s:'10:00',e:'12:00',l:'Paper Sessions 5',t:'paper',r:['605','1104','1305','905']},
-    {d:5,s:'12:00',e:'13:00',l:'Catered Lunch',t:'break',r:[]},
-    {d:5,s:'13:00',e:'14:00',l:'Keynote 4',t:'keynote',r:['605']},
-    {d:5,s:'14:00',e:'16:00',l:'Paper Sessions 6',t:'paper',r:['605','1104','1305','905']},
-    {d:5,s:'16:30',e:'17:00',l:'Closing Remarks',t:'ceremony',r:['605']},
+    {d:5,s:'09:00',e:'10:00',l:'Keynote 5',t:'keynote',r:['CommonGround']},
+    {d:5,s:'10:00',e:'12:00',l:'Session 13',t:'paper',r:['605'],pc:3,pi:0},
+    {d:5,s:'10:00',e:'12:00',l:'Session 14',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:5,s:'10:00',e:'12:00',l:'Session 15',t:'paper',r:['1305'],pc:3,pi:2},
+    {d:5,s:'12:00',e:'13:00',l:'Catered Lunch',t:'break',r:['+15','Atrium']},
+    {d:5,s:'13:00',e:'14:00',l:'Keynote 6',t:'keynote',r:['CommonGround']},
+    {d:5,s:'14:00',e:'16:00',l:'Session 16',t:'paper',r:['605'],pc:3,pi:0},
+    {d:5,s:'14:00',e:'16:00',l:'Session 17',t:'paper',r:['1104'],pc:3,pi:1},
+    {d:5,s:'14:00',e:'16:00',l:'Session 18',t:'paper',r:['1305'],pc:3,pi:2},
+    {d:5,s:'16:00',e:'16:30',l:'Coffee Break',t:'break',r:['CommonGround']},
+    {d:5,s:'16:30',e:'17:30',l:'Closing Remarks',t:'ceremony',r:['605']},
     {d:6,s:'08:00',e:'11:00',l:'Departure + Lake Louise',t:'trip',r:[]},
     {d:6,s:'11:00',e:'12:30',l:'Lunch (Art Centre)',t:'break',r:[]},
     {d:6,s:'13:00',e:'15:00',l:'Banff Gondola',t:'trip',r:[]},
@@ -59,13 +87,13 @@
   ];
 
   var C = {
-    workshop:{bg:'rgba(35,41,122,0.07)',ring:'#23297a',text:'#23297a',active:'rgba(35,41,122,0.15)'},
-    paper:{bg:'rgba(46,125,50,0.06)',ring:'#4caf50',text:'#2e7d32',active:'rgba(46,125,50,0.14)'},
-    keynote:{bg:'rgba(35,41,122,0.14)',ring:'#23297a',text:'#23297a',active:'rgba(35,41,122,0.22)'},
-    ceremony:{bg:'rgba(35,41,122,0.18)',ring:'#23297a',text:'#23297a',active:'rgba(35,41,122,0.25)'},
+    workshop:{bg:'rgba(92,107,192,0.07)',ring:'#5c6bc0',text:'#3949ab',active:'rgba(92,107,192,0.15)'},
+    paper:{bg:'rgba(35,41,122,0.07)',ring:'#23297a',text:'#23297a',active:'rgba(35,41,122,0.15)'},
+    keynote:{bg:'rgba(46,125,50,0.08)',ring:'#4caf50',text:'#2e7d32',active:'rgba(46,125,50,0.16)'},
+    ceremony:{bg:'rgba(46,125,50,0.12)',ring:'#388e3c',text:'#2e7d32',active:'rgba(46,125,50,0.20)'},
     social:{bg:'rgba(142,68,173,0.08)',ring:'#9c27b0',text:'#7b1fa2',active:'rgba(142,68,173,0.16)'},
     break:{bg:'rgba(0,0,0,0.025)',ring:'rgba(0,0,0,0.12)',text:'#999',active:'rgba(0,0,0,0.06)'},
-    trip:{bg:'rgba(230,126,34,0.07)',ring:'#e67e22',text:'#b5561a',active:'rgba(230,126,34,0.14)'},
+    trip:{bg:'rgba(210,140,70,0.06)',ring:'#c9956a',text:'#9a7048',active:'rgba(210,140,70,0.12)'},
   };
 
   var DAYS = [
@@ -130,7 +158,20 @@
       b.style.background=c.bg;
       b.style.borderLeftColor=c.ring;
       b.style.color=c.text;
-      b.textContent=ev.l;
+      if(ev.pc){
+        var w=100/ev.pc;
+        b.style.width='calc('+w+'% - 1px)';
+        b.style.marginLeft=(w*ev.pi)+'%';
+        b.innerHTML=ev.l+'<br><small>#'+ev.r[0]+'</small>';
+        b.classList.add('pu-tt-ev-par');
+      }else if(ev.r&&ev.r.length){
+        var dur=tm(ev.e)-tm(ev.s);
+        b.innerHTML=dur<=30
+          ? ev.l+' <small>#'+ev.r.join(' #')+'</small>'
+          : ev.l+'<br><small>#'+ev.r.join(' #')+'</small>';
+      }else{
+        b.textContent=ev.l;
+      }
       b.onclick=function(){selDay=ev.d;selMin=tm(ev.s);render();};
       grid.appendChild(b);
     });
@@ -175,7 +216,7 @@
       var isGym=fi.floor===10,empty=fi.rooms.length===0&&!isGym;
       var row=mk('div','pu-fl'+(isGym?' pu-fl-gym':'')+(empty?' pu-fl-empty':''));
       var lbl=mk('div','pu-fl-lbl');
-      lbl.innerHTML='<strong>'+fi.label+'</strong><span>'+fi.name+'</span>';
+      lbl.innerHTML='<strong>'+fi.label+'</strong>'+(fi.name?'<span>'+fi.name+'</span>':'');
       row.appendChild(lbl);
       var rms=mk('div','pu-rms');
       if(isGym){rms.innerHTML='<span class="pu-gy">GYM</span>';}
@@ -250,6 +291,26 @@
     var needles=box.querySelectorAll('.pu-tt-needle');
     needles.forEach(function(n){n.style.gridRow=tr(selMin);});
   }
+
+  /* ══ VEIL (hidden by default, Cmd+Space / Ctrl+Space to reveal) ══ */
+  var unveiled = false;
+  var veil = mk('div','pu-veil');
+  veil.innerHTML =
+    '<div class="pu-veil-inner">' +
+      '<div class="pu-veil-icon">&#9998;</div>' +
+      '<h2 class="pu-veil-heading">Program Details Coming Soon</h2>' +
+      '<p class="pu-veil-text">The detailed conference schedule, room allocations, and session information will be announced in early 2027.</p>' +
+    '</div>';
+  box.parentNode.style.position = 'relative';
+  box.parentNode.appendChild(veil);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.code === 'Space' && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
+      unveiled = !unveiled;
+      veil.classList.toggle('pu-veil-hidden', unveiled);
+    }
+  });
 
   render();
 })();

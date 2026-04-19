@@ -681,13 +681,13 @@ body {
 }
 
 .tag-papers {
-  background: rgba(30, 36, 112, 0.08);
-  color: #1e2470;
+  background: rgba(35, 41, 122, 0.08);
+  color: #23297a;
 }
 
 .tag-workshops {
-  background: rgba(92, 107, 192, 0.1);
-  color: #4a54a0;
+  background: rgba(92, 107, 192, 0.08);
+  color: #3949ab;
 }
 
 .tag-reg {
@@ -802,13 +802,13 @@ body {
 }
 
 .tag-ws {
-  background: rgba(92, 107, 192, 0.1);
-  color: #4a54a0;
+  background: rgba(92, 107, 192, 0.08);
+  color: #3949ab;
 }
 
 .tag-optional {
-  background: rgba(46, 125, 50, 0.08);
-  color: #2e7d32;
+  background: rgba(210, 140, 70, 0.08);
+  color: #9a7048;
 }
 
 /* Workshop day left accent */
@@ -817,11 +817,11 @@ body {
 }
 
 .program-day--papers {
-  border-left: 3px solid #1e2470;
+  border-left: 3px solid #23297a;
 }
 
 .program-day--optional {
-  border-left: 3px solid #2e7d32;
+  border-left: 3px solid #c9956a;
 }
 
 .program-day-body {
@@ -866,12 +866,12 @@ body {
 }
 
 .program-item--social {
-  color: #0277bd;
-  font-weight: 600;
+  color: inherit;
+  font-weight: inherit;
 }
 
 .program-slot--eve {
-  background: rgba(2, 119, 189, 0.03);
+  background: transparent;
 }
 
 @media (max-width: 600px) {
@@ -1752,6 +1752,17 @@ body {
 }
 .pu-tt-ev:hover { opacity: .7; }
 
+.pu-tt-ev-par {
+  font-size: .55rem;
+  padding: 2px 3px;
+  border-left-width: 2px;
+  line-height: 1.25;
+}
+.pu-tt-ev-par small {
+  opacity: .6;
+  font-size: .5rem;
+}
+
 /* Needle */
 .pu-tt-needle {
   height: 0;
@@ -1875,6 +1886,50 @@ body {
   .pu-rm { min-width: 32px; height: 28px; }
   .pu-rm-n { font-size: .52rem; }
   .pu-rm-e { font-size: .38rem; }
+}
+
+/* Veil overlay */
+.pu-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: opacity .4s ease, visibility .4s;
+}
+
+.pu-veil-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pu-veil-inner {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 480px;
+}
+
+.pu-veil-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: .25;
+}
+
+.pu-veil-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: .75rem;
+}
+
+.pu-veil-text {
+  font-size: .88rem;
+  color: var(--color-muted);
+  line-height: 1.6;
 }
 
 .contact-content {

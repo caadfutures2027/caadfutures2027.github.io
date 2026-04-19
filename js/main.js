@@ -99,14 +99,14 @@ function buildGantt() {
 
   // ── Colors (vivid) ──
   const C = {
-    papers:     '#1e2470',
+    papers:     '#23297a',
     review:     '#3b44a8',
     workshops:  '#5c6bc0',
     regEarly:   '#c6443e',
     regRegular: '#d4645f',
-    social:     '#0277bd',
-    keynote:    '#1a237e',
-    banff:      '#2e7d32',
+    social:     '#7b1fa2',
+    keynote:    '#2e7d32',
+    banff:      '#c9956a',
   };
 
   // ── Track data ──
@@ -147,18 +147,18 @@ function buildGantt() {
     {
       name: 'Keynotes',
       bars: [
-        { label: 'Keynote 1',  start: d(2027,7,1),  end: d(2027,7,2),  color: C.keynote,  marker: true },
-        { label: 'Keynote 2',  start: d(2027,7,2),  end: d(2027,7,3),  color: C.keynote,  marker: true },
-        { label: 'Keynote 3',  start: d(2027,7,3),  end: d(2027,7,3,12), color: C.keynote, marker: true },
-        { label: 'Keynote 4',  start: d(2027,7,3,12), end: d(2027,7,4), color: C.keynote,  marker: true },
+        { label: 'K1/2',  start: d(2027,7,1),  end: d(2027,7,2),  color: C.keynote, marker: true },
+        { label: 'K3/4',  start: d(2027,7,2),  end: d(2027,7,3),  color: C.keynote, marker: true },
+        { label: 'K5/6',  start: d(2027,7,3),  end: d(2027,7,4),  color: C.keynote, marker: true },
       ]
     },
     {
       name: 'Social',
       bars: [
-        { label: 'Welcome',    start: d(2027,6,30), end: d(2027,7,1),  color: C.social },
-        { label: 'Banquet',    start: d(2027,7,2),  end: d(2027,7,3),  color: C.social },
-        { label: 'Banff Trip', start: d(2027,7,4),  end: d(2027,7,5),  color: C.banff },
+        { label: 'Mixer',      start: d(2027,6,29,12), end: d(2027,6,30), color: C.social },
+        { label: 'Welcome',    start: d(2027,6,30,12), end: d(2027,7,1),  color: C.social },
+        { label: 'Banquet',    start: d(2027,7,2,12),  end: d(2027,7,3),  color: C.social },
+        { label: 'Banff Trip', start: d(2027,7,4),     end: d(2027,7,5),  color: C.banff },
       ]
     },
   ];
