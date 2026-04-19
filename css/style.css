@@ -1478,7 +1478,7 @@ body {
 
 .vms-panel .venue-hotels-table,
 .vms-panel .venue-spaces-table {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.85);
 }
 
 .vms-panel .venue-hotels-table th {
@@ -1495,6 +1495,10 @@ body {
 }
 
 .vms-panel .venue-space-desc {
+  color: rgba(255,255,255,0.6);
+}
+
+.vms-panel .venue-hotel-names {
   color: rgba(255,255,255,0.6);
 }
 
