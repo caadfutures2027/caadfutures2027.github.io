@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Phase system ──
   const PHASES = {
-    A: { label: 'Now', title: 'Call for Papers Open', desc: 'Submission deadline: September 30, 2026', btn: 'Submit Paper', link: 'papers.html' },
+    A: { label: 'Now', title: 'Call for Papers Open', desc: 'Submission deadline: September 15, 2026', btn: 'Submit Paper', link: 'papers.html' },
     B: { label: 'Status', title: 'Under Review', desc: 'Notifications by late December 2026', btn: 'View Timeline', link: 'papers.html' },
     C: { label: 'Now', title: 'Registration Open', desc: 'Early-bird deadline: Late March 2027', btn: 'Register Now', link: 'registration.html' },
     D: { label: 'Coming Up', title: 'See You in Calgary', desc: 'June 29 – July 3, 2027', btn: 'View Program', link: '/program' },
