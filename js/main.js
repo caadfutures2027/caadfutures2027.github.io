@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Phase system ──
   const PHASES = {
     A: { label: 'Now', title: 'Call for Papers Open', desc: 'Submission deadline: September 15, 2026', btn: 'Submit Paper', link: 'papers.html' },
-    B: { label: 'Status', title: 'Under Review', desc: 'Notifications by late December 2026', btn: 'View Timeline', link: 'papers.html' },
-    C: { label: 'Now', title: 'Registration Open', desc: 'Early-bird deadline: Late March 2027', btn: 'Register Now', link: 'registration.html' },
+    B: { label: 'Status', title: 'Under Review', desc: 'Notifications by late January 2027', btn: 'View Timeline', link: 'papers.html' },
+    C: { label: 'Now', title: 'Registration Open', desc: 'Early-bird deadline: Late April 2027', btn: 'Register Now', link: 'registration.html' },
     D: { label: 'Coming Up', title: 'See You in Calgary', desc: 'June 29 – July 3, 2027', btn: 'View Program', link: '/program' },
     E: { label: 'Live', title: 'Happening Now', desc: 'Check today\'s schedule', btn: 'View Schedule', link: '/program' },
     F: { label: 'Archive', title: 'Thank You, Calgary', desc: 'Proceedings and gallery now available', btn: 'View Proceedings', link: '/post' }
@@ -114,10 +114,10 @@ function buildGantt() {
     {
       name: 'Papers',
       bars: [
-        { label: 'Submission',    start: d(2026,7,1),   end: d(2026,10,1),  color: C.papers },
-        { label: 'Review',        start: d(2026,10,1),  end: d(2026,12,15), color: C.review },
-        { label: 'Acceptance',    start: d(2026,12,15), end: d(2027,1,15),  color: C.papers },
-        { label: 'Camera-Ready',  start: d(2027,1,15),  end: d(2027,2,28),  color: C.review },
+        { label: 'Submission',    start: d(2026,6,1),   end: d(2026,10,1),  color: C.papers },
+        { label: 'Review',        start: d(2026,10,1),  end: d(2027,1,15),  color: C.review },
+        { label: 'Acceptance',    start: d(2027,1,15),  end: d(2027,2,15),  color: C.papers },
+        { label: 'Camera-Ready',  start: d(2027,2,15),  end: d(2027,3,31),  color: C.review },
       ]
     },
     {
@@ -130,8 +130,8 @@ function buildGantt() {
     {
       name: 'Registration',
       bars: [
-        { label: 'Early Bird',   start: d(2027,3,1),   end: d(2027,4,15),  color: C.regEarly },
-        { label: 'Regular',      start: d(2027,4,15),  end: d(2027,6,15),  color: C.regRegular },
+        { label: 'Early Bird',   start: d(2027,3,15),  end: d(2027,5,1),   color: C.regEarly },
+        { label: 'Regular',      start: d(2027,5,1),   end: d(2027,6,15),  color: C.regRegular },
       ]
     },
     {
