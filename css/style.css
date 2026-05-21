@@ -164,6 +164,12 @@ body {
   position: relative;
 }
 
+.hero-gif {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .hero-eyebrow {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 3rem);
