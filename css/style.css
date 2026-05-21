@@ -653,14 +653,14 @@ body {
   width: 220px;
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--color-text-tertiary);
+  color: var(--color-text);
   padding-right: 2rem !important;
   white-space: nowrap;
 }
 
 .dates-event {
   font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-text);
 }
