@@ -19,7 +19,7 @@
     sapl:     '#e91e78',
     labelBg:  'rgba(25,30,95,0.55)',
     labelBdr: 'rgba(255,255,255,0.14)',
-    font:     "'Segoe UI', system-ui, sans-serif",
+    font:     "'Inter', system-ui, sans-serif",
   };
 
   function el(tag, attrs, parent) {
