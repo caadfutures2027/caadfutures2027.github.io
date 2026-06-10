@@ -123,8 +123,8 @@ function buildGantt() {
     {
       name: 'Workshops',
       bars: [
-        { label: 'Proposal',     start: d(2027,1,1),   end: d(2027,2,28),  color: C.workshops },
-        { label: 'Review',       start: d(2027,3,1),    end: d(2027,5,15),  color: '#8088d0' },
+        { label: 'Proposal',     start: d(2026,7,15),  end: d(2026,12,15), color: C.workshops },
+        { label: 'Review',       start: d(2026,12,15), end: d(2027,2,1),   color: '#8088d0' },
       ]
     },
     {
