@@ -23,6 +23,33 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .header-bg-wrap {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .header-bg-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('imgs/workshop_header_bg.png') center/cover no-repeat;
+      opacity: 0.82;
+      z-index: -1;
+    }
+    .header-bg-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, #fafafa 0%, rgba(250,250,250,0) 16%),
+        linear-gradient(to left, #fafafa 0%, rgba(250,250,250,0) 16%),
+        linear-gradient(to bottom, rgba(250,250,250,0) 45%, #fafafa 100%),
+        linear-gradient(to bottom, rgba(250,250,250,0.45), rgba(250,250,250,0.72));
+      z-index: -1;
+    }
+    .header-bg-wrap .page-header {
+      background: transparent;
+    }
   </style>
 </head>
 <body>
@@ -57,34 +84,38 @@
   </div>
 
 
-  <!-- ══ PAGE HEADER ══ -->
-  <section class="page-header">
-    <p class="section-label">CAAD Futures 2027</p>
-    <h1 class="page-title">Call for Workshops</h1>
-  </section>
+  <!-- ══ PAGE HEADER + META (shared background) ══ -->
+  <div class="header-bg-wrap">
+    <section class="page-header">
+      <p class="section-label">CAAD Futures 2027</p>
+      <h1 class="page-title">Call for Workshops</h1>
+    </section>
+
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2.5rem;">
+      <div class="cfp-meta-row">
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Open</p>
+          <p class="cfp-meta-value">July 15, 2026</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Deadline</p>
+          <p class="cfp-meta-value cfp-meta-value--accent">December 15, 2026</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Format</p>
+          <p class="cfp-meta-value"><a href="#" class="cfp-meta-link">Proposal Template (coming soon)</a></p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Submission</p>
+          <p class="cfp-meta-value"><a href="#" class="cfp-meta-link">Submit via Microsoft CMT (coming soon)</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
 
 
   <!-- ══ SECTION: WORKSHOPS ══ -->
-  <section class="section" id="cfw" style="padding-top: 2rem;">
-
-    <div class="cfp-meta-row">
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Open</p>
-        <p class="cfp-meta-value">July 15, 2026</p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Deadline</p>
-        <p class="cfp-meta-value cfp-meta-value--accent">December 15, 2026</p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Format</p>
-        <p class="cfp-meta-value"><a href="#" class="cfp-meta-link">Proposal Template (coming soon)</a></p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Submission</p>
-        <p class="cfp-meta-value"><a href="#" class="cfp-meta-link">Submit via Microsoft CMT (coming soon)</a></p>
-      </div>
-    </div>
+  <section class="section" id="cfw" style="padding-top: 0;">
 
     <div class="divider-inline"><hr></div>
 
@@ -111,6 +142,91 @@
           <li>Technical requirements (software, hardware, space)</li>
           <li>Expected number of participants</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Facilities & Equipment -->
+    <div class="cfp-theme-block reveal">
+      <h3 class="cfp-section-heading">Facilities &amp; Equipment</h3>
+      <div class="cfp-theme-text">
+        <p>For workshops focused on fabrication and prototyping, please refer to the lab spaces and equipment available at the School of Architecture, Planning and Landscape (SAPL):</p>
+      </div>
+
+      <div class="facility-equip-grid">
+        <div class="facility-equip-group">
+          <h4 class="facility-equip-heading">Woodshop &amp; CNC</h4>
+          <ul class="facility-equip-list">
+            <li>SAPL woodshop with traditional woodshop tools</li>
+            <li>CNC milling: 2 CNC (3-axis)</li>
+            <li>Laser cutting: 8 Boss Lasers — LS 2440, LS 5440, LS 1630</li>
+          </ul>
+        </div>
+
+        <div class="facility-equip-group">
+          <h4 class="facility-equip-heading">Clay &amp; Plaster</h4>
+          <ul class="facility-equip-list">
+            <li>Clay and plaster processing area with 2 Lutum clay 3D printers and 2 kilns</li>
+            <li>WASP 3MT LDM/GDM extruder</li>
+            <li>WASP 2040 LDM extruder</li>
+          </ul>
+        </div>
+
+        <div class="facility-equip-group">
+          <h4 class="facility-equip-heading">3D Printing</h4>
+          <ul class="facility-equip-list">
+            <li>Various Creality, Bambu and Elegoo FDM printers</li>
+            <li>Elegoo OrangeStorm large-format FDM printer</li>
+          </ul>
+        </div>
+
+        <div class="facility-equip-group">
+          <h4 class="facility-equip-heading">Robotics</h4>
+          <ul class="facility-equip-list">
+            <li>2&#215; ABB IRB 2600</li>
+            <li>2&#215; Universal UR10e (1 on Vention linear rail)</li>
+            <li>Hotwire bow 24/48&#8243;, 2&#160;kW spindle, MDPH2 pellet extruder</li>
+            <li>PIAB vacuum grippers, Robotiq 2F-140 adaptive grippers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility-gallery">
+        <figure class="facility-card">
+          <img src="imgs/facility_8.png" alt="SAPL woodshop with traditional woodworking tools" loading="lazy">
+          <figcaption class="facility-card-label">Woodshop</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_4.png" alt="ShopSabre 3-axis CNC milling machines" loading="lazy">
+          <figcaption class="facility-card-label">CNC Milling</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_6.png" alt="Laser cutting room with Boss Lasers" loading="lazy">
+          <figcaption class="facility-card-label">Laser Cutting</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_7.png" alt="Clay and plaster area with kilns" loading="lazy">
+          <figcaption class="facility-card-label">Kilns &amp; Clay</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_2.png" alt="Elegoo OrangeStorm large-format FDM printer" loading="lazy">
+          <figcaption class="facility-card-label">Large-Format 3D Printing</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_3.png" alt="Two ABB IRB 2600 industrial robots" loading="lazy">
+          <figcaption class="facility-card-label">ABB Robots</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_1.png" alt="Universal UR10e robots on Vention linear rail" loading="lazy">
+          <figcaption class="facility-card-label">UR10e on Linear Rail</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_5.png" alt="SAPL fabrication studio" loading="lazy">
+          <figcaption class="facility-card-label">Fabrication Lab</figcaption>
+        </figure>
+        <figure class="facility-card">
+          <img src="imgs/facility_9.png" alt="SAPL making space and workbenches" loading="lazy">
+          <figcaption class="facility-card-label">Making Space</figcaption>
+        </figure>
       </div>
     </div>
 

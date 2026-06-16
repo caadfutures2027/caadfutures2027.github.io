@@ -23,6 +23,33 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .header-bg-wrap {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .header-bg-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('imgs/papers_header_bg.png') center/cover no-repeat;
+      opacity: 0.82;
+      z-index: -1;
+    }
+    .header-bg-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, #fafafa 0%, rgba(250,250,250,0) 16%),
+        linear-gradient(to left, #fafafa 0%, rgba(250,250,250,0) 16%),
+        linear-gradient(to bottom, rgba(250,250,250,0) 45%, #fafafa 100%),
+        linear-gradient(to bottom, rgba(250,250,250,0.45), rgba(250,250,250,0.72));
+      z-index: -1;
+    }
+    .header-bg-wrap .page-header {
+      background: transparent;
+    }
   </style>
 </head>
 <body>
@@ -57,36 +84,40 @@
   </div>
 
 
-  <!-- ══ PAGE HEADER ══ -->
-  <section class="page-header">
-    <p class="section-label">CAAD Futures 2027</p>
-    <h1 class="page-title">Call for Papers</h1>
-  </section>
+  <!-- ══ PAGE HEADER + META (shared background) ══ -->
+  <div class="header-bg-wrap">
+    <section class="page-header">
+      <p class="section-label">CAAD Futures 2027</p>
+      <h1 class="page-title">Call for Papers</h1>
+    </section>
+
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2.5rem;">
+      <div class="cfp-meta-row">
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Open</p>
+          <p class="cfp-meta-value">June 1, 2026</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Deadline</p>
+          <p class="cfp-meta-value cfp-meta-value--accent">September 15, 2026 (AoE)</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Format</p>
+          <p class="cfp-meta-value"><a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noopener" class="cfp-meta-link">Paper Template (Springer LNCS)</a></p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Submission</p>
+          <p class="cfp-meta-value"><a href="https://cmt3.research.microsoft.com/CAAD2027" target="_blank" rel="noopener" class="cfp-meta-link">Submit via Microsoft CMT</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
 
 
   <!-- ══ SECTION 1: SUBMISSION ══ -->
-  <section class="section" id="cfp-submission" style="padding-top: 2rem;">
+  <section class="section" id="cfp-submission" style="padding-top: 0;">
 
-    <div class="cfp-meta-row">
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Open</p>
-        <p class="cfp-meta-value">June 1, 2026</p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Deadline</p>
-        <p class="cfp-meta-value cfp-meta-value--accent">September 15, 2026 (AoE)</p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Format</p>
-        <p class="cfp-meta-value"><a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noopener" class="cfp-meta-link">Paper Template (Springer LNCS)</a></p>
-      </div>
-      <div class="cfp-meta-block">
-        <p class="cfp-meta-label">Submission</p>
-        <p class="cfp-meta-value"><a href="https://cmt3.research.microsoft.com/CAAD2027" target="_blank" rel="noopener" class="cfp-meta-link">Submit via Microsoft CMT</a></p>
-      </div>
-    </div>
-
-    <p style="font-size: 0.8rem; color: #999; line-height: 1.5; margin-top: 0.75rem; margin-bottom: 2.5rem;">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+    <p style="font-size: 0.8rem; color: #999; line-height: 1.5; margin-top: 0; margin-bottom: 2.5rem;">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
 
     <div class="divider-inline"><hr></div>
 
