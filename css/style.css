@@ -468,11 +468,18 @@ body {
 
 /* ── PHASE CARD ── */
 
+.phase-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
 .phase-card {
   background: var(--color-accent);
   color: white;
   border-radius: 5px;
   padding: 2rem 2.5rem;
+  flex: 1 1 340px;
   max-width: 480px;
   position: relative;
   overflow: hidden;
