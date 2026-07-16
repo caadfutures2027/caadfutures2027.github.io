@@ -471,7 +471,8 @@ body {
 .phase-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 2rem;
+  max-width: 1000px;
 }
 
 .phase-card {
@@ -479,8 +480,8 @@ body {
   color: white;
   border-radius: 5px;
   padding: 2rem 2.5rem;
-  flex: 1 1 340px;
-  max-width: 480px;
+  flex: 1 1 0;
+  min-width: 0;
   position: relative;
   overflow: hidden;
 }
@@ -2381,6 +2382,7 @@ body {
   .hero { padding: 6rem 1.25rem 2.5rem; }
   .hero-title { white-space: nowrap; font-size: clamp(2rem, 7vw, 3rem); }
 
+  .phase-cards { flex-direction: column; gap: 1.25rem; }
   .phase-card { padding: 1.5rem; }
   .hero-meta { flex-direction: column; gap: 0.75rem; }
 
