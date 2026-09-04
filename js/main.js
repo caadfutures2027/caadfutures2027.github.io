@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Phase system ──
   const PHASES = {
-    A: { label: 'Now', title: 'Call for Papers Open', desc: 'Submission deadline: September 15, 2026', btn: 'Submit Paper', link: 'papers.html' },
+    A: { label: 'Now', title: 'Call for Papers Open', desc: 'Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <strong class="deadline-new">September 30, 2026 (AoE)</strong> <span class="deadline-badge">Extended</span>', btn: 'Submit Paper', link: 'papers.html' },
     B: { label: 'Status', title: 'Under Review', desc: 'Notifications by late January 2027', btn: 'View Timeline', link: 'papers.html' },
     C: { label: 'Now', title: 'Registration Open', desc: 'Early-bird deadline: Late April 2027', btn: 'Register Now', link: 'registration.html' },
     D: { label: 'Coming Up', title: 'See You in Calgary', desc: 'June 29 – July 3, 2027', btn: 'View Program', link: '/program' },
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (card) {
       card.querySelector('.phase-label').textContent = phase.label;
       card.querySelector('.phase-title').textContent = phase.title;
-      card.querySelector('.phase-desc').textContent = phase.desc;
+      card.querySelector('.phase-desc').innerHTML = phase.desc;
       const btn = card.querySelector('.phase-btn');
       btn.querySelector('span').textContent = phase.btn;
       btn.href = phase.link;
