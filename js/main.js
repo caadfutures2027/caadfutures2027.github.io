@@ -102,6 +102,7 @@ function buildGantt() {
     papers:     '#23297a',
     review:     '#3b44a8',
     workshops:  '#5c6bc0',
+    short:      '#0e6e6e',
     regEarly:   '#c6443e',
     regRegular: '#d4645f',
     social:     '#7b1fa2',
@@ -118,6 +119,15 @@ function buildGantt() {
         { label: 'Review',        start: d(2026,10,1),  end: d(2027,1,15),  color: C.review },
         { label: 'Acceptance',    start: d(2027,1,15),  end: d(2027,2,15),  color: C.papers },
         { label: 'Camera-Ready',  start: d(2027,2,15),  end: d(2027,3,31),  color: C.review },
+      ]
+    },
+    {
+      name: 'Short Paper',
+      bars: [
+        { label: 'Submission',    start: d(2026,9,21),  end: d(2026,12,1),  color: C.short },
+        { label: 'Review',        start: d(2026,12,1),  end: d(2027,1,25),  color: '#2a9a9a' },
+        { label: 'Camera-Ready',  start: d(2027,2,15),  end: d(2027,3,31),  color: C.short },
+        { label: 'Online Forum',  start: d(2027,7,1),   end: d(2027,7,3),   color: C.short },
       ]
     },
     {

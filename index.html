@@ -34,6 +34,7 @@
       <ul class="nav-links">
         <li><a href="papers.html">Papers</a></li>
         <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="award.html">Award</a></li>
         <li><a href="program.html">Program</a></li>
         <li><a href="venue.html">Venue</a></li>
         <li><a href="registration.html">Registration</a></li>
@@ -51,6 +52,7 @@
   <div class="mobile-menu">
     <a href="papers.html">Papers</a>
     <a href="workshops.html">Workshops</a>
+    <a href="award.html">Award</a>
     <a href="program.html">Program</a>
     <a href="venue.html">Venue</a>
     <a href="registration.html">Registration</a>
@@ -86,12 +88,24 @@
 
     <!-- Phase Dashboard Cards -->
     <div class="phase-cards">
-      <div class="phase-card">
+      <div class="phase-card phase-card--cfp phase-card--pulse">
         <p class="phase-label">Now</p>
         <h3 class="phase-title">Call for Papers Open</h3>
         <p class="phase-desc">Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <strong class="deadline-new">September 30, 2026 (AoE)</strong> <span class="deadline-badge">Extended</span></p>
         <a href="papers.html" class="phase-btn">
           <span>Submit Paper</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="phase-card phase-card--ers">
+        <p class="phase-label">Opens Sep 21</p>
+        <h3 class="phase-title">Emerging Research Sessions</h3>
+        <p class="phase-desc">Short paper (4–6 pages) deadline: November 30, 2026 (AoE)</p>
+        <a href="papers.html#emerging" class="phase-btn">
+          <span>Submit Short Paper</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
@@ -109,7 +123,22 @@
           </svg>
         </a>
       </div>
+
     </div>
+
+    <a class="award-spotlight" href="award.html">
+      <div class="award-spotlight-copy">
+        <p class="award-spotlight-kicker">New · Official Honour</p>
+        <h3 class="award-spotlight-title">Emerging Scholar Award</h3>
+        <p class="award-spotlight-desc">Recognizing outstanding full papers by graduate students and postdoctoral researchers — with complimentary registration and travel support for Calgary.</p>
+      </div>
+      <span class="award-spotlight-cta">
+        <span>View Award</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+      </span>
+    </a>
 
     <!-- Gantt Timeline -->
     <div class="gantt" id="gantt"></div>
@@ -198,6 +227,16 @@
           <td class="dates-tag"><span class="tag-papers">Papers</span></td>
         </tr>
         <tr class="dates-row">
+          <td class="dates-date">September 21, 2026</td>
+          <td class="dates-event">Emerging Research Call Opens</td>
+          <td class="dates-tag"><span class="tag-short">Short Paper</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">November 30, 2026 (AoE)</td>
+          <td class="dates-event">Emerging Research Paper Deadline</td>
+          <td class="dates-tag"><span class="tag-short">Short Paper</span></td>
+        </tr>
+        <tr class="dates-row">
           <td class="dates-date">October 2026 – January 2027</td>
           <td class="dates-event">Review Period</td>
           <td class="dates-tag"><span class="tag-papers">Papers</span></td>
@@ -213,9 +252,19 @@
           <td class="dates-tag"><span class="tag-papers">Papers</span></td>
         </tr>
         <tr class="dates-row">
+          <td class="dates-date">Late January 2027</td>
+          <td class="dates-event">Emerging Scholar Award Notification</td>
+          <td class="dates-tag"><span class="tag-award">Award</span></td>
+        </tr>
+        <tr class="dates-row">
           <td class="dates-date">Mid March 2027</td>
           <td class="dates-event">Camera-Ready Submission</td>
           <td class="dates-tag"><span class="tag-papers">Papers</span></td>
+        </tr>
+        <tr class="dates-row">
+          <td class="dates-date">July 1–2, 2027</td>
+          <td class="dates-event">Online Emerging Research Forum</td>
+          <td class="dates-tag"><span class="tag-short">Short Paper</span></td>
         </tr>
         <tr class="dates-row">
           <td class="dates-date">July 15, 2026</td>
@@ -571,6 +620,7 @@
           <ul class="footer-links">
             <li><a href="papers.html">Papers</a></li>
             <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="award.html">Award</a></li>
             <li><a href="program.html">Program</a></li>
           </ul>
         </div>
