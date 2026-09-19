@@ -2,12 +2,333 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=papers.html#emerging">
-  <link rel="canonical" href="papers.html#emerging">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emerging Research Sessions — CAAD Futures 2027</title>
-  <script>location.replace('papers.html#emerging');</script>
+  <meta name="description" content="Call for Emerging Research Papers for CAAD Futures 2027. 4–6 page short papers for the Online Emerging Research Forum, July 1–2, 2027.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .header-bg-wrap {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .header-bg-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('imgs/venue_bg.png') center 30%/cover no-repeat;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    .header-bg-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, #fafafa 0%, rgba(250,250,250,0.88) 22%, rgba(250,250,250,0.35) 55%, rgba(250,250,250,0.75) 100%),
+        linear-gradient(to bottom, rgba(250,250,250,0.2) 0%, #fafafa 88%);
+      z-index: -1;
+    }
+    .header-bg-wrap .page-header {
+      background: transparent;
+    }
+  </style>
 </head>
-<body>
-  <p>This track is now part of the <a href="papers.html#emerging">Call for Papers</a>.</p>
+<body class="ers-page">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CAAD Futures 2027 <span>Calgary</span></a>
+      <ul class="nav-links">
+        <li><a href="papers.html">Papers</a></li>
+        <li><a href="short-papers.html" class="active">Short Paper</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="award.html">Award</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="venue.html">Venue</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="papers.html">Papers</a>
+    <a href="short-papers.html">Short Paper</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="award.html">Award</a>
+    <a href="program.html">Program</a>
+    <a href="venue.html">Venue</a>
+    <a href="registration.html">Registration</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <div class="header-bg-wrap">
+    <section class="page-header">
+      <p class="section-label">CAAD Futures 2027</p>
+      <h1 class="page-title">Emerging Research Sessions</h1>
+    </section>
+
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2.5rem;">
+      <div class="cfp-meta-row">
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Open</p>
+          <p class="cfp-meta-value">September 21, 2026</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Short Paper Deadline</p>
+          <p class="cfp-meta-value cfp-meta-value--accent">November 30, 2026 (Mountain Time)</p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Format</p>
+          <p class="cfp-meta-value"><a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noopener" class="cfp-meta-link">Paper Template (Springer LNCS)</a></p>
+        </div>
+        <div class="cfp-meta-block">
+          <p class="cfp-meta-label">Submission</p>
+          <p class="cfp-meta-value"><a href="https://cmt3.research.microsoft.com/CAAD2027" target="_blank" rel="noopener" class="cfp-meta-link">Submit via Microsoft CMT</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <section class="section" id="ers-submission" style="padding-top: 0;">
+
+    <p style="font-size: 0.8rem; color: #999; line-height: 1.5; margin-top: 0; margin-bottom: 2.5rem;">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+
+    <div class="divider-inline"><hr></div>
+
+    <div class="cfp-theme-block reveal">
+      <h2 class="cfp-theme-title">Online Emerging Research Forum</h2>
+      <div class="cfp-theme-text">
+        <p>The Online Emerging Research Forum is a distinct track for emerging research, works in progress, exploratory studies, and innovative practices. Papers are <strong>4–6 pages</strong>, appear in a separate digital proceedings, and are presented <span class="track-badge track-badge--online">Online</span> on July 1–2, 2027. It does not replace the <a href="papers.html">full-paper track</a>, and the same work may not be submitted to both tracks.</p>
+      </div>
+    </div>
+
+    <div class="cfp-theme-block reveal">
+      <h3 class="cfp-section-heading">Topics</h3>
+      <div class="cfp-theme-text">
+        <p>The research areas are the same as the full-paper track. Submissions should use the same Springer LNCS template; only the length differs.</p>
+      </div>
+    </div>
+
+    <table class="cfp-topics-table reveal">
+      <thead>
+        <tr>
+          <th class="cfp-topics-th-cat">Category</th>
+          <th class="cfp-topics-th-topics">Topics include, but are not limited to</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">01</span>
+            Design Generation
+          </td>
+          <td class="cfp-topics-list">Generative Design · Design Automation · AI for Design, Prediction, and Decision-Making · Algorithmic and Parametric Design · Optimization for Design · Performance-Based Design · Responsive and Adaptive Design · Shape, Form, and Geometry Studies</td>
+        </tr>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">02</span>
+            Theory, History, and Pedagogy
+          </td>
+          <td class="cfp-topics-list">Design Theories of Agency · Historical Trajectories of Computational Design · Computational Design Education and Curricula · Digital Heritage and Conservation · Computational Aesthetics · Frameworks for Design Practice</td>
+        </tr>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">03</span>
+            Architectural and Urban Systems
+          </td>
+          <td class="cfp-topics-list">Building Information Modelling and Digital Twins · Modelling and Simulations · 3D Visualization at Urban Scale · Smart Buildings and Cities, IoT · Spatial Decision Support Systems · BIM-GIS Integration</td>
+        </tr>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">04</span>
+            Socio-Technical Implications
+          </td>
+          <td class="cfp-topics-list">Ethics, Privacy, and Intellectual Property · Human-Computer Interaction in Design · Collaborative and Multi-Disciplinary Design · Inclusive, Participatory Design, and Co-Creation · VR / AR / XR · Gamification</td>
+        </tr>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">05</span>
+            Fabrication, Materiality, and Robotic Construction
+          </td>
+          <td class="cfp-topics-list">Digital Fabrication and Materials · Robots and Drones for the Built Environment · Machine Learning and Robotic Fabrication · Digital Construction for a Circular Economy · AI for Life-Cycle Planning</td>
+        </tr>
+        <tr>
+          <td class="cfp-topics-cat">
+            <span class="cfp-topics-num">06</span>
+            Data, Sensing, and Computational Infrastructure
+          </td>
+          <td class="cfp-topics-list">Data Acquisition Systems and Processes · Data Infrastructures, Databases, and Platforms · Sensing and Monitoring for Data-Driven Design · Data Analytics and Evidence-Based Design · Massive Spatial Data Storage and Processing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ers-panel">
+
+    <div class="cfp-theme-block reveal">
+      <h2 class="cfp-theme-title">Author Guidelines</h2>
+      <div class="cfp-theme-text">
+        <p>This page provides essential information for authors. Please review the details below carefully.</p>
+      </div>
+    </div>
+
+    <div class="cfp-theme-block reveal">
+      <h3 class="cfp-section-heading ers-mark">Submission Format</h3>
+      <div class="cfp-theme-text">
+        <p><strong>Initial Submission (PDF only):</strong></p>
+        <ul class="cfp-proposal-list">
+          <li>Submit a single <strong>PDF</strong> file prepared using the Springer LNCS template — the same template as the full-paper track. Download in <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noopener">DOC or LaTeX format</a>.</li>
+          <li>Emerging Research Papers are <strong>4–6 pages</strong>. Please read the <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank" rel="noopener">Instructions for Proceedings Authors (PDF)</a>.</li>
+          <li>Submit via <a href="https://cmt3.research.microsoft.com/CAAD2027" target="_blank" rel="noopener">Microsoft CMT</a>. You will need to create a CMT account if you do not already have one.</li>
+        </ul>
+        <p style="margin-top: 1rem;"><strong>Camera-Ready Submission (ZIP):</strong></p>
+        <ul class="cfp-proposal-list">
+          <li>Upon acceptance, authors will submit a final camera-ready version as a <strong>ZIP</strong> file containing the source files and PDF, following Springer LNCS formatting guidelines.</li>
+          <li>Retain your original DOC or LaTeX source files. All figures must be submitted as separate image files within the ZIP archive.</li>
+          <li>Ensure consistent British English spelling throughout the manuscript.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cfp-theme-block reveal" style="margin-bottom: 0;">
+      <h3 class="cfp-section-heading ers-mark">How to Submit via Microsoft CMT</h3>
+      <div class="cfp-theme-text">
+        <p><strong>Step 1.</strong> Create a Microsoft CMT account at <a href="https://cmt3.research.microsoft.com" target="_blank" rel="noopener">cmt3.research.microsoft.com</a> and log in.</p>
+        <p><strong>Step 2.</strong> From the top menu, click <strong>All Conferences</strong>.</p>
+        <p><strong>Step 3.</strong> In the filter box on the right, type <strong>caad</strong>.</p>
+        <p><strong>Step 4.</strong> Click <strong>Computer-Aided Architectural Design Futures 2027</strong> to enter the conference.</p>
+        <p><strong>Step 5.</strong> In the Author Console, click <strong>+ Create new submission</strong>.</p>
+        <p><strong>Step 6.</strong> Select <strong style="color: #0e6e6e; font-size: 1.08em;">Emerging Research Paper</strong> as the submission type and follow the on-screen instructions.</p>
+
+        <div style="margin-top: 1.5rem;">
+          <p style="font-weight: 600; margin-bottom: 0.75rem;">Video Guide</p>
+          <video controls playsinline preload="metadata" style="width: 100%; max-width: 720px; border-radius: 8px; border: 1px solid var(--color-border);">
+            <source src="imgs/cmt_submission.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="cfp-timeline reveal" style="margin-top: 2.5rem;">
+      <h3 class="cfp-section-heading ers-mark">Timeline &amp; Review Process</h3>
+      <div class="cfp-theme-text" style="margin-bottom: 1rem;">
+        <p>All submissions undergo peer review. Acceptance notifications follow the same schedule as the full-paper track.</p>
+      </div>
+      <table class="dates-table">
+        <thead>
+          <tr>
+            <th style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); text-align: left; padding: 0.5rem 0; border-bottom: 2px solid var(--color-border);">Date</th>
+            <th style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); text-align: left; padding: 0.5rem 0; border-bottom: 2px solid var(--color-border);">Milestone</th>
+            <th style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); text-align: left; padding: 0.5rem 0 0.5rem 2rem; border-bottom: 2px solid var(--color-border);">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="dates-row is-now">
+            <td class="dates-date">September 21, 2026</td>
+            <td class="dates-event">Submission Opens</td>
+            <td class="dates-event" style="color: var(--color-text-secondary); font-size: 0.82rem; padding-left: 2rem;">Authors submit Emerging Research Papers via Microsoft CMT</td>
+          </tr>
+          <tr class="dates-row">
+            <td class="dates-date">November 30, 2026 (Mountain Time)</td>
+            <td class="dates-event">Short Paper Deadline</td>
+            <td class="dates-event" style="color: var(--color-text-secondary); font-size: 0.82rem; padding-left: 2rem;">4–6 page PDF in Springer LNCS format</td>
+          </tr>
+          <tr class="dates-row">
+            <td class="dates-date">Late January 2027</td>
+            <td class="dates-event">Acceptance Notification</td>
+            <td class="dates-event" style="color: var(--color-text-secondary); font-size: 0.82rem; padding-left: 2rem;">Same announcement window as full papers</td>
+          </tr>
+          <tr class="dates-row">
+            <td class="dates-date">Mid March 2027</td>
+            <td class="dates-event">Camera-Ready Submission</td>
+            <td class="dates-event" style="color: var(--color-text-secondary); font-size: 0.82rem; padding-left: 2rem;">Final manuscript in Springer LNCS format</td>
+          </tr>
+          <tr class="dates-row dates-conf">
+            <td class="dates-date">July 1–2, 2027</td>
+            <td class="dates-event">Online Emerging Research Forum</td>
+            <td class="dates-event" style="color: var(--color-text-secondary); font-size: 0.82rem; padding-left: 2rem;">Accepted short papers presented online</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">CAAD Futures 2027</p>
+          <p class="footer-brand-sub">
+            Design Agency<br>
+            June 29 – July 3, 2027<br>
+            Calgary, Canada
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Conference</p>
+          <ul class="footer-links">
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="short-papers.html">Short Paper</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="award.html">Award</a></li>
+            <li><a href="program.html">Program</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Attend</p>
+          <ul class="footer-links">
+            <li><a href="venue.html">Venue & Travel</a></li>
+            <li><a href="registration.html">Registration</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:caadfutures2027@gmail.com">caadfutures2027@gmail.com</a></li>
+            <li><a href="https://sapl.ucalgary.ca" target="_blank" rel="noopener">SAPL Website</a></li>
+            <li><a href="https://www.caadfutures.org/" target="_blank" rel="noopener">CAAD Futures Foundation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 CAAD Futures. School of Architecture, Planning and Landscape, University of Calgary.</p>
+        <div class="footer-logos">
+          <span>SAPL</span>
+          <span>University of Calgary</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
