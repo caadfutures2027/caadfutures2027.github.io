@@ -2160,6 +2160,58 @@ body {
   opacity: 0.6;
 }
 
+.venue-stampede-gallery {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  grid-template-rows: 220px;
+  gap: 4px;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.venue-stampede-gallery > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.venue-stampede-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.venue-stampede-gallery > div:hover img {
+  transform: scale(1.04);
+}
+
+.venue-stampede-gallery > div:first-child img {
+  object-position: center 28%;
+}
+
+.venue-stampede-gallery > div:nth-child(2) img {
+  object-position: center 35%;
+}
+
+.venue-stampede-gallery > div:nth-child(3) img {
+  object-position: center 42%;
+}
+
+.venue-stampede-credit {
+  margin-top: 0.85rem;
+  font-size: 0.68rem;
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .venue-stampede-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 150px 150px;
+  }
+}
+
 /* ── REGISTRATION PLACEHOLDER ── */
 
 .reg-placeholder {
