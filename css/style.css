@@ -1643,6 +1643,10 @@ body {
   color: var(--color-accent);
 }
 
+[data-deadline][hidden] {
+  display: none !important;
+}
+
 .deadline-old {
   text-decoration: line-through;
   text-decoration-thickness: 1.5px;
