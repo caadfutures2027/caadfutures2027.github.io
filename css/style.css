@@ -814,6 +814,20 @@ body {
   color: #d4af37;
 }
 
+.award-panel .deadline-old {
+  color: rgba(255, 220, 70, 0.55);
+  text-decoration-color: rgba(255, 220, 70, 0.7);
+}
+
+.award-panel .deadline-new {
+  color: #ffdc46;
+}
+
+.award-panel .deadline-badge {
+  background: #ffdc46;
+  color: #141414;
+}
+
 .award-benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -997,6 +1011,22 @@ body {
 
 .ers-panel .cfp-theme-text strong,
 .ers-panel .cfp-proposal-list strong {
+  color: #0e6e6e;
+}
+
+.cfp-theme-text .ers-proceedings-note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0.9rem 1rem;
+  background: #e6f3f3;
+  border-left: 3px solid #0e6e6e;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.cfp-theme-text .ers-proceedings-note strong {
   color: #0e6e6e;
 }
 
@@ -2844,6 +2874,22 @@ body {
 
 .cfp-timeline {
   margin-bottom: 3rem;
+}
+
+.cfp-theme-text .cfp-proceedings-note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0.9rem 1rem;
+  background: var(--color-accent-light);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.cfp-theme-text .cfp-proceedings-note strong {
+  color: var(--color-accent);
 }
 
 .cfp-proceedings {
