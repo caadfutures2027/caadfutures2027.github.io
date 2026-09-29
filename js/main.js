@@ -191,9 +191,9 @@ function buildGantt() {
     {
       name: 'Keynotes',
       bars: [
-        { label: 'K1/2',  start: d(2027,7,1),  end: d(2027,7,2),  color: C.keynote, marker: true },
-        { label: 'K3/4',  start: d(2027,7,2),  end: d(2027,7,3),  color: C.keynote, marker: true },
-        { label: 'K5/6',  start: d(2027,7,3),  end: d(2027,7,4),  color: C.keynote, marker: true },
+        { label: 'K1',  start: d(2027,7,1),  end: d(2027,7,2),  color: C.keynote, marker: true },
+        { label: 'K2',  start: d(2027,7,2),  end: d(2027,7,3),  color: C.keynote, marker: true },
+        { label: 'K3',  start: d(2027,7,3),  end: d(2027,7,4),  color: C.keynote, marker: true },
       ]
     },
     {
