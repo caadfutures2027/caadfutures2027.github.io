@@ -97,12 +97,12 @@
   };
 
   var DAYS = [
-    {d:1,sh:'Day 1',dt:'Jun 29',wd:'Sun'},
-    {d:2,sh:'Day 2',dt:'Jun 30',wd:'Mon'},
-    {d:3,sh:'Day 3',dt:'Jul 1',wd:'Tue'},
-    {d:4,sh:'Day 4',dt:'Jul 2',wd:'Wed'},
-    {d:5,sh:'Day 5',dt:'Jul 3',wd:'Thu'},
-    {d:6,sh:'Day 6',dt:'Jul 4',wd:'Fri'},
+    {d:1,sh:'Day 1',dt:'Jun 29',wd:'Tue'},
+    {d:2,sh:'Day 2',dt:'Jun 30',wd:'Wed'},
+    {d:3,sh:'Day 3',dt:'Jul 1',wd:'Thu'},
+    {d:4,sh:'Day 4',dt:'Jul 2',wd:'Fri'},
+    {d:5,sh:'Day 5',dt:'Jul 3',wd:'Sat'},
+    {d:6,sh:'Day 6',dt:'Jul 4',wd:'Sun'},
   ];
 
   /* ══ STATE ══ */
