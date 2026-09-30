@@ -1594,10 +1594,30 @@ body {
   font-style: italic;
 }
 
-/* ── KEYNOTES (same cards as the organizing team) ── */
+/* ── KEYNOTES (team cards, distinguished) ── */
 
 .keynote-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.keynote-grid .committee-card {
+  border-top: 2px solid var(--color-accent);
+}
+
+.keynote-grid .committee-photo {
+  width: 104px;
+  height: 104px;
+  filter: none;
+}
+
+.keynote-grid .committee-card:hover .committee-photo {
+  filter: none;
+}
+
+.keynote-grid .committee-role {
+  color: var(--color-accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .committee-name a {
@@ -1612,8 +1632,14 @@ body {
 .keynote-bio {
   margin-top: 0.85rem;
   font-size: 0.85rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-text-secondary);
+}
+
+.keynote-bio a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 900px) {
