@@ -1594,6 +1594,99 @@ body {
   font-style: italic;
 }
 
+/* ── KEYNOTES ── */
+
+.keynote-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.keynote-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.keynote-photo {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  background: #ececf1;
+}
+
+.keynote-photo--empty {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.keynote-body {
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+
+.keynote-when {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.45rem;
+}
+
+.keynote-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.keynote-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.keynote-name a:hover {
+  color: var(--color-accent);
+}
+
+.keynote-role {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.85rem;
+  line-height: 1.45;
+}
+
+.keynote-bio {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.keynote-credit {
+  margin-top: 0.85rem;
+  font-size: 0.72rem;
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 900px) {
+  .keynote-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
 /* ── PAGE HEADER (sub-pages) ── */
 
 .page-header {
