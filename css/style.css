@@ -1607,11 +1607,11 @@ body {
 .keynote-grid .committee-photo {
   width: 104px;
   height: 104px;
-  filter: none;
+  filter: grayscale(100%);
 }
 
 .keynote-grid .committee-card:hover .committee-photo {
-  filter: none;
+  filter: grayscale(100%);
 }
 
 .keynote-grid .committee-role {
