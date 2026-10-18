@@ -555,6 +555,14 @@ body {
   background: linear-gradient(160deg, #6f767e 0%, #8d949c 100%);
 }
 
+.phase-card--review .phase-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.phase-card--review .phase-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .phase-card--review .phase-btn.is-disabled {
   background: rgba(255, 255, 255, 0.45);
   color: #6a727b;
