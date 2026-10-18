@@ -1,3 +1,20 @@
+function isPaperCallClosed() {
+  try {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Edmonton',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).formatToParts(new Date());
+    const ymd = parts.find((p) => p.type === 'year').value
+      + '-' + parts.find((p) => p.type === 'month').value
+      + '-' + parts.find((p) => p.type === 'day').value;
+    return ymd >= '2026-10-17';
+  } catch (err) {
+    return Date.now() >= Date.UTC(2026, 9, 17, 6);
+  }
+}
+
 function isPaperFinalExtensionLive() {
   try {
     const parts = new Intl.DateTimeFormat('en-CA', {
@@ -71,26 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
     A: { label: 'Now', title: 'Full Paper Call Open', desc: isPaperFinalExtensionLive()
       ? 'Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <s class="deadline-old">September 30, 2026 (AoE)</s> <strong class="deadline-new">October 16, 2026 (AoE)</strong> <span class="deadline-badge">Final Extension</span>'
       : 'Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <strong class="deadline-new">September 30, 2026 (AoE)</strong> <span class="deadline-badge">Extended</span>', btn: 'Submit Paper', link: 'papers.html' },
-    B: { label: 'Status', title: 'Under Review', desc: 'Notifications by late January 2027', btn: 'View Timeline', link: 'papers.html' },
+    B: { label: 'Review', title: 'Full Papers Under Review', desc: 'Closed October 16, 2026 (AoE). Thank you — peer review is now underway.', btn: 'View Timeline', link: 'papers.html' },
     C: { label: 'Now', title: 'Registration Open', desc: 'Early-bird deadline: Late April 2027', btn: 'Register Now', link: 'registration.html' },
     D: { label: 'Coming Up', title: 'See You in Calgary', desc: 'June 29 – July 3, 2027', btn: 'View Program', link: '/program' },
     E: { label: 'Live', title: 'Happening Now', desc: 'Check today\'s schedule', btn: 'View Schedule', link: '/program' },
     F: { label: 'Archive', title: 'Thank You, Calgary', desc: 'Proceedings and gallery now available', btn: 'View Proceedings', link: '/post' }
   };
 
-  const currentPhase = document.body.dataset.phase || 'A';
-  const phase = PHASES[currentPhase];
-  if (phase) {
-    const card = document.querySelector('.phase-card');
-    if (card) {
-      card.querySelector('.phase-label').textContent = phase.label;
-      card.querySelector('.phase-title').textContent = phase.title;
-      const desc = card.querySelector('.phase-desc:not([hidden])') || card.querySelector('.phase-desc');
-      desc.innerHTML = phase.desc;
-      const btn = card.querySelector('.phase-btn');
-      btn.querySelector('span').textContent = phase.btn;
-      btn.href = phase.link;
-    }
+  const papersCard = document.querySelector('.phase-card--papers');
+  if (papersCard) {
+    const phase = isPaperCallClosed() ? PHASES.B : PHASES.A;
+    papersCard.querySelector('.phase-label').textContent = phase.label;
+    papersCard.querySelector('.phase-title').textContent = phase.title;
+    const desc = papersCard.querySelector('.phase-desc:not([hidden])') || papersCard.querySelector('.phase-desc');
+    desc.innerHTML = phase.desc;
+    const btn = papersCard.querySelector('.phase-btn');
+    btn.querySelector('span').textContent = phase.btn;
+    btn.href = phase.link;
   }
 
   // ── Gantt Timeline ──

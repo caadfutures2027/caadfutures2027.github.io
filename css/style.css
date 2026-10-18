@@ -551,6 +551,14 @@ body {
   transform: translateX(2px);
 }
 
+.phase-card--papers {
+  background: linear-gradient(160deg, #1c2258 0%, #2a3278 100%);
+}
+
+.phase-card--papers .phase-btn {
+  color: #1c2258;
+}
+
 .phase-card--cfp {
   background: linear-gradient(145deg, #4f63f2 0%, #6d7cff 55%, #8aa0ff 100%);
 }
@@ -826,6 +834,11 @@ body {
 .award-panel .deadline-badge {
   background: #ffdc46;
   color: #141414;
+}
+
+.award-panel .deadline-badge--closed {
+  background: rgba(243, 227, 168, 0.28);
+  color: #f3e3a8;
 }
 
 .award-benefits {
@@ -1755,6 +1768,11 @@ body {
   border-radius: 3px;
   vertical-align: 0.12em;
   margin-left: 0.3rem;
+}
+
+.deadline-badge--closed {
+  background: #8a8f98;
+  color: #fff;
 }
 
 .cfp-meta-value .deadline-old {

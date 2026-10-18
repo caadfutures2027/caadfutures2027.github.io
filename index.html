@@ -25,7 +25,7 @@
     }
   </style>
 </head>
-<body data-phase="A">
+<body data-phase="B">
 
   <!-- ══ NAV ══ -->
   <nav class="nav">
@@ -90,19 +90,6 @@
 
     <!-- Phase Dashboard Cards -->
     <div class="phase-cards">
-      <div class="phase-card phase-card--cfp phase-card--pulse">
-        <p class="phase-label">Now</p>
-        <h3 class="phase-title">Full Paper Call Open</h3>
-        <p class="phase-desc" data-deadline="current">Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <strong class="deadline-new">September 30, 2026 (AoE)</strong> <span class="deadline-badge">Extended</span></p>
-        <p class="phase-desc" data-deadline="final" hidden>Full paper submission deadline: <s class="deadline-old">September 15, 2026 (AoE)</s> <s class="deadline-old">September 30, 2026 (AoE)</s> <strong class="deadline-new">October 16, 2026 (AoE)</strong> <span class="deadline-badge">Final Extension</span></p>
-        <a href="papers.html" class="phase-btn">
-          <span>Submit Paper</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-          </svg>
-        </a>
-      </div>
-
       <div class="phase-card phase-card--ers">
         <p class="phase-label">Now</p>
         <h3 class="phase-title">Online Emerging Research Forum</h3>
@@ -121,6 +108,18 @@
         <p class="phase-desc">Workshop proposal deadline: December 15, 2026</p>
         <a href="workshops.html" class="phase-btn">
           <span>Propose Workshop</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="phase-card phase-card--papers">
+        <p class="phase-label">Review</p>
+        <h3 class="phase-title">Full Papers Under Review</h3>
+        <p class="phase-desc">Closed October 16, 2026 (AoE). Thank you — peer review is now underway.</p>
+        <a href="papers.html" class="phase-btn">
+          <span>View Timeline</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
@@ -220,7 +219,7 @@
 
     <table class="dates-table">
       <tbody>
-        <tr class="dates-row is-now">
+        <tr class="dates-row">
           <td class="dates-date dates-date--extended">
             <span data-deadline="current">
               <s class="deadline-old">September 15, 2026 (AoE)</s>
@@ -231,7 +230,7 @@
               <s class="deadline-old">September 15, 2026 (AoE)</s>
               <s class="deadline-old">September 30, 2026 (AoE)</s>
               <span class="deadline-new">October 16, 2026 (AoE)</span>
-              <span class="deadline-badge">Final Extension</span>
+              <span class="deadline-badge deadline-badge--closed">Closed</span>
             </span>
           </td>
           <td class="dates-event">Full Paper Submission</td>
@@ -247,7 +246,7 @@
           <td class="dates-event">Emerging Research Paper Deadline</td>
           <td class="dates-tag"><span class="tag-short">Short Paper</span></td>
         </tr>
-        <tr class="dates-row">
+        <tr class="dates-row is-now">
           <td class="dates-date">
             <span data-deadline="current">October 2026 – January 2027</span>
             <span data-deadline="final" hidden>Mid October 2026 – January 2027</span>
