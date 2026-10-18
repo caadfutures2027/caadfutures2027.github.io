@@ -573,16 +573,21 @@ body {
 }
 
 .phase-card--pulse {
+  --pulse: 79, 99, 242;
   animation: phase-card-blink 1.4s ease-in-out infinite;
+}
+
+.phase-card--ers.phase-card--pulse {
+  --pulse: 14, 110, 110;
 }
 
 @keyframes phase-card-blink {
   0%, 100% {
-    box-shadow: 0 8px 24px rgba(79, 99, 242, 0.28);
+    box-shadow: 0 8px 24px rgba(var(--pulse), 0.28);
     filter: brightness(1);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.45), 0 18px 42px rgba(79, 99, 242, 0.5);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.45), 0 18px 42px rgba(var(--pulse), 0.5);
     filter: brightness(1.28);
   }
 }
