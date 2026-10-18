@@ -551,12 +551,24 @@ body {
   transform: translateX(2px);
 }
 
-.phase-card--papers {
-  background: linear-gradient(160deg, #1c2258 0%, #2a3278 100%);
+.phase-card--review {
+  background: linear-gradient(160deg, #6f767e 0%, #8d949c 100%);
 }
 
-.phase-card--papers .phase-btn {
-  color: #1c2258;
+.phase-card--review .phase-btn.is-disabled {
+  background: rgba(255, 255, 255, 0.45);
+  color: #6a727b;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.phase-card--review .phase-btn.is-disabled:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: none;
+}
+
+.phase-card--review .phase-btn.is-disabled:hover svg {
+  transform: none;
 }
 
 .phase-card--cfp {
